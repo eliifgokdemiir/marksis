@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BlankComponent } from './layouts/blank/blank.component';
 import { FullComponent } from './layouts/full/full.component';
 import { BranchComponent } from './pages/branch/branch.component';
+import { UsersComponent } from './pages/users/users.component';
 
 const routes: Routes = [
   {
@@ -34,6 +35,10 @@ const routes: Routes = [
       {
         path: 'branch',
         component: BranchComponent,
+      },
+      {
+        path: 'users',
+        component: UsersComponent,
       },
     ],
   },

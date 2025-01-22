@@ -15,6 +15,11 @@ export const navItems: NavItem[] = [
     route: '/branch',
   },
   {
+    displayName: 'Kullanıcılar',
+    iconName: 'mood-smile',
+    route: '/users',
+  },
+  {
     navCap: 'Ui Components',
   },
   {

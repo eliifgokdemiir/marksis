@@ -1,0 +1,255 @@
+.cardWithShadow {
+  margin: 5px;
+  box-shadow: 0px 7px 30px 0px rgba(90, 114, 123, 0.11) !important;
+}
+
+.card-header {
+  background: linear-gradient(135deg, #1e88e5, #1565c0);
+  padding: 20px;
+  border-radius: 10px;
+  
+  .h3 {
+    color: white;
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+}
+
+.m-t-16 {
+  margin-top: 16px;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.f-w-600 {
+  font-weight: 600;
+}
+
+.mat-subtitle-1 {
+  font-size: 16px;
+}
+
+.f-s-14 {
+  font-size: 14px;
+}
+
+.m-l-16 {
+  margin-left: 16px;
+}
+
+.f-s-12 {
+  font-size: 12px;
+}
+
+.rounded {
+  border-radius: 4px;
+}
+
+.p-6 {
+  padding: 6px;
+}
+
+.p-y-4 {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+// Priority badge colors
+.bg-light-accent { background-color: rgba(255, 64, 129, 0.15); }
+.text-accent { color: #ff4081; }
+
+.bg-light-primary { background-color: rgba(33, 150, 243, 0.15); }
+.text-primary { color: #2196f3; }
+
+.bg-light-warning { background-color: rgba(255, 152, 0, 0.15); }
+.text-warning { color: #ff9800; }
+
+.bg-light-error { background-color: rgba(244, 67, 54, 0.15); }
+.text-error { color: #f44336; }
+
+.bg-light-success { background-color: rgba(76, 175, 80, 0.15); }
+.text-success { color: #4caf50; }
+
+// Menu stilleri
+.mat-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  
+  mat-icon {
+    margin-right: 8px;
+    color: #666;
+  }
+}
+
+.mat-icon-button {
+  color: #666;
+}
+
+// Tablo hücre hizalaması
+td.mat-cell {
+  padding: 16px 8px;
+  vertical-align: middle;
+}
+
+.status-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status-toggle {
+  ::ng-deep .mat-slide-toggle-label {
+    margin-left: 8px;
+  }
+  
+  ::ng-deep .mat-slide-toggle-bar {
+    background-color: rgba(0, 0, 0, 0.12);
+  }
+  
+  ::ng-deep .mat-slide-toggle-thumb {
+    background-color: #fff;
+  }
+  
+  &.mat-checked {
+    ::ng-deep .mat-slide-toggle-bar {
+      background-color: rgba(33, 150, 243, 0.5);
+    }
+    
+    ::ng-deep .mat-slide-toggle-thumb {
+      background-color: #2196f3;
+    }
+  }
+}
+
+// Dialog stilleri
+::ng-deep .mat-dialog-container {
+  padding: 24px;
+  border-radius: 8px;
+}
+
+::ng-deep .mat-dialog-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+::ng-deep .mat-dialog-content {
+  margin: 0;
+  padding: 20px 0;
+}
+
+::ng-deep .mat-dialog-actions {
+  margin-bottom: 0;
+  padding: 8px 0;
+  gap: 8px;
+}
+
+.container-fluid {
+  padding: 24px;
+  width: 100%;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.table-container {
+  overflow-x: auto;
+  margin: 0 -24px;  // Card padding'ini dengele
+  
+  table {
+    min-width: 800px;  // Minimum tablo genişliği
+    
+    th.mat-header-cell,
+    td.mat-cell {
+      padding: 16px 24px;
+      
+      &:first-child {
+        padding-left: 24px;
+      }
+      
+      &:last-child {
+        padding-right: 24px;
+      }
+    }
+    
+    th.mat-header-cell {
+      background-color: #f5f5f5;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.87);
+    }
+    
+    tr.mat-row {
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.02);
+      }
+    }
+  }
+}
+
+// Responsive düzenlemeler
+@media screen and (max-width: 960px) {
+  .container-fluid {
+    padding: 5px;
+  }
+  
+  .table-container {
+    margin: 0 -16px;
+    border-radius: 5px;
+    
+    table {
+      th.mat-header-cell,
+      td.mat-cell {
+        padding: 12px 16px;
+        
+        &:first-child {
+          padding-left: 16px;
+        }
+        
+        &:last-child {
+          padding-right: 16px;
+        }
+      }
+    }
+  }
+}
+
+// Mevcut tablo hücresi stillerini güncelle
+td.mat-cell {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.87);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+// Kullanıcı bilgileri sütunu için özel stil
+.d-flex.align-items-center {
+  gap: 16px;
+  
+  img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .m-l-16 {
+    margin-left: 0; // gap kullandığımız için margin'i kaldırdık
+    
+    h6 {
+      margin: 0;
+      line-height: 1.2;
+    }
+    
+    span {
+      color: rgba(0, 0, 0, 0.6);
+    }
+  }
+}
